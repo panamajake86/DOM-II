@@ -1,10 +1,10 @@
 // Your code goes here
 const btnBtn = document.querySelectorAll(".btn");
-for(var i = 0; i < btnBtn.length; i++){
-    btnBtn[i].addEventListener('click', (event)=> {
-    console.log("That tickles!");
-    })
-};
+btnBtn.forEach((event) =>{
+    event.addEventListener('click', (e) =>{
+        event.textContent = 'That tickles!';
+    });
+});
 
 const grow = document.querySelectorAll('h4');
 grow.forEach((event) =>{
@@ -40,3 +40,11 @@ body.addEventListener('keyup', (e) =>{
     image[1].src = 'img/sad.jpg';
 });
 
+image[1].addEventListener('click', (e) =>{
+    image[1].src = 'img/adventure.jpg';
+    image[2].src = 'img/sad.jpg';
+});
+
+image[3].addEventListener('drag', (e) =>{
+    image[2].src = 'img/fun.jpg';
+});
