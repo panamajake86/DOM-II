@@ -7,29 +7,36 @@ for(var i = 0; i < btnBtn.length; i++){
 };
 
 const grow = document.querySelectorAll('h4');
-grow[0].addEventListener('mouseover', (event) => {
-    grow[0].style.transform = 'scale(1.5)';
-});
-grow[0].addEventListener('mouseout', (event) => {
-    grow[0].style.transform = 'scale(1)';
+grow.forEach((event) =>{
+    event.addEventListener('mouseover', (e) =>{
+        event.style.transform = 'scale(1.5)';
+    });
+
+    event.addEventListener('mouseout', (e) =>{
+        event.style.transform = 'scale(1)';
+    });
 });
 
-grow[1].addEventListener('mouseover', (event) => {
-    grow[1].style.transform = 'scale(1.5)';
-});
-grow[1].addEventListener('mouseout', (event) => {
-    grow[1].style.transform = 'scale(1)';
+const image = document.querySelectorAll('img');
+image[0].addEventListener('dblclick', (e) =>{
+    image[0].src = "img/bus-fire.jpg";
 });
 
-grow[2].addEventListener('mouseover', (event) => {
-    grow[2].style.transform = 'scale(1.5)';
-});
-grow[2].addEventListener('mouseout', (event) => {
-    grow[2].style.transform = 'scale(1)';
+const body = document.querySelector('body');
+console.log(body);
+body.addEventListener('wheel', (e) =>{
+    body.style.backgroundColor = 'green';
 });
 
-const image = document.querySelector('img');
-image.addEventListener('dblclick', (e) =>{
-    image.src = "img/bus-fire.jpg";
+body.addEventListener('keyup', (e) =>{
+    body.style.backgroundColor = 'white';
+});
+
+body.addEventListener('keydown', (e) =>{
+    image[1].src = 'img/smiley.jpg';
+});
+
+body.addEventListener('keyup', (e) =>{
+    image[1].src = 'img/sad.jpg';
 });
 
