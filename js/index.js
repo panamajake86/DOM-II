@@ -55,3 +55,16 @@ image[3].addEventListener('drag', (e) =>{
     image[2].src = 'img/fun.jpg';
 });
 
+const stop = document.querySelectorAll('.nav-link');
+stop.forEach((event) =>{
+    event.addEventListener('mouseover', (e) =>{
+        event.style.backgroundColor = 'blue';
+    });
+
+    event.addEventListener('mouseout', (e) =>{
+        event.style.backgroundColor = 'orange';
+    });
+    event.addEventListener('click', (e) => {
+        e.preventDefault();
+});
+});
