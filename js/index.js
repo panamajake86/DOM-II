@@ -17,9 +17,15 @@ grow.forEach((event) =>{
     });
 });
 
+const intro = document.querySelector('.intro');
+intro.addEventListener('dblclick', (e) =>{
+    intro.textContent = "You done screwed up!";
+});
+
 const image = document.querySelectorAll('img');
 image[0].addEventListener('dblclick', (e) =>{
     image[0].src = "img/bus-fire.jpg";
+    e.stopPropagation();
 });
 
 const body = document.querySelector('body');
@@ -48,3 +54,4 @@ image[1].addEventListener('click', (e) =>{
 image[3].addEventListener('drag', (e) =>{
     image[2].src = 'img/fun.jpg';
 });
+
